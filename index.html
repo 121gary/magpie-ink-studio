@@ -79,7 +79,7 @@
         </header>
         <script>
             // add classes for mobile navigation toggling
-            var CSbody = document.querySelector('body');
+            const CSbody = document.querySelector('body');
             const CSnavbarMenu = document.querySelector('#cs-navigation');
             const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
 
@@ -110,14 +110,9 @@
                     const dropDowns2 = Array.from(document.querySelectorAll('#cs-navigation .cs-active'));
                     for (const itemB of dropDowns2) {
                         itemB.classList.toggle('cs-active');
-                        console.log("test");
                     }
-                    // item.classList.toggle('cs-active');
-                    // CShamburgerMenu.classList.toggle('cs-active');
                     CSnavbarMenu.classList.toggle('cs-active');
                     CSbody.classList.toggle('cs-open');
-                    // item.classList.toggle('cs-active');
-                    // // run the function to check the aria-expanded value
                     ariaExpanded();
                 };
                 item.addEventListener('click', onClick);
@@ -144,8 +139,7 @@
                 <h2 class="cs-title">Book an Appointment</h2>
                 <p class="cs-text"><br>Each Magpie artist has their own unique booking process, typically detailed on their Instagram page. <br><span class="cs-text-bold">Contact artists directly for appointments.</span></p>
                 <br><br><br>
-                <!-- TODO: fix above -->
-                <a class="cs-item" target=”_blank” aria-label="visit Magpie instagram" href="https://www.instagram.com/magpie.inkstudio">
+                <a class="cs-item" target="_blank" aria-label="visit Magpie instagram" href="https://www.instagram.com/magpie.inkstudio">
                     <img src="Images/Monogram-White-GradientOutline.svg">
                 </a>
             </div>
