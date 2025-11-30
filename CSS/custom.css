@@ -11,7 +11,7 @@
     --bodyTextColorWhite: #F4F7F5; */
     --bodyTextColor: var(--primary);
     --bodyTextColorWhite: var(--secondaryLight);
-    --footerColor: var:var(--secondary)
+    --footerColor: var(--secondary);
     --white: #fff;
     --magpieBlue: #0012B7;
     /* 13px - 16px */
