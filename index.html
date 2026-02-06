@@ -36,7 +36,7 @@
         <header id="cs-navigation">
             <div class="cs-container">
                 <!--Nav Logo-->
-                <a href="#home" class="cs-logo" aria-label="back to home">
+                <a href="/" class="cs-logo" aria-label="back to home">
                     <img src="Images/logotypeBlack.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
                 </a>
                 <!--Navigation List-->
@@ -53,22 +53,22 @@
                     <div class="cs-ul-wrapper">
                         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                             <li class="cs-li">
-                                <a href="#home" class="cs-li-link cs-dropdown">
+                                <a href="/" class="cs-li-link cs-dropdown">
                                     Home
                                 </a>
                             </li>
                             <li class="cs-li">
-                                <a href="#appointments" class="cs-li-link cs-dropdown">
+                                <a href="/appointments" class="cs-li-link cs-dropdown">
                                     Appointments
                                 </a>
                             </li>
                             <li class="cs-li">
-                                <a href="#artists" class="cs-li-link cs-dropdown">
+                                <a href="/artists" class="cs-li-link cs-dropdown">
                                     Artists
                                 </a>
                             </li>
                             <li class="cs-li">
-                                <a href="#inquiries" class="cs-li-link cs-dropdown">
+                                <a href="/inquiries" class="cs-li-link cs-dropdown">
                                     Join Us
                                 </a>
                             </li>
@@ -316,7 +316,7 @@
             <div class="cs-container">
                 <!-- Logo Group -->
                 <div class="cs-logo-group">
-                    <a aria-label="go back to home" class="cs-logo" href="#home">
+                    <a aria-label="go back to home" class="cs-logo" href="/">
                         <img class="cs-logo-img light" aria-hidden="true" loading="lazy" decoding="async" src="Images/Monogram-White-Background.svg" alt="logo">
                     </a>
                     <a class="cs-contact-link" href="https://maps.app.goo.gl/1gzuV3XRDLJU2ipn6">1913 N Milwaukee Ave, Chicago, IL</a>
@@ -336,5 +336,27 @@
                 </div>
             </div>
         </footer>
+        <script>
+            // Handle nav link clicks - scroll to section and update URL
+            document.querySelectorAll('a[href^="/"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const path = this.getAttribute('href').replace('/', '');
+                    const section = path ? document.getElementById(path) : document.getElementById('home');
+                    if (section) {
+                        e.preventDefault();
+                        section.scrollIntoView({ behavior: 'smooth' });
+                        history.pushState(null, '', this.getAttribute('href'));
+                    }
+                });
+            });
+
+            // Scroll to section on page load based on URL path
+            (function() {
+                const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+                if (path && document.getElementById(path)) {
+                    document.getElementById(path).scrollIntoView();
+                }
+            })();
+        </script>
     </body>
 </html>
