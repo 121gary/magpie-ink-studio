@@ -113,7 +113,7 @@ img {
 }
 
 .cs-text {
-    font-size: var(--bodyFontSize);
+    font-size: 1rem;
     line-height: 1.5em;
     text-align: inherit;
     width: 100%;
@@ -216,8 +216,7 @@ h1,h2,h3,h4,h5,h6 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 16px - 20px */
-      gap: clamp(1rem, 1.5vw, 1.25rem);
+      gap: clamp(2.5rem, 5vw, 5rem);
   }
   #artists .cs-item {
       width: 100%;
@@ -353,6 +352,9 @@ h1,h2,h3,h4,h5,h6 {
 @media only screen and (min-width: 48rem) {
   #artists .cs-item {
       grid-column: span 6;
+  }
+  .cs-text {
+      font-size: 1rem;
   }
 }
 
@@ -902,6 +904,9 @@ h1,h2,h3,h4,h5,h6 {
   <--- -------------------------- -*/
   /* Small Desktop - 1024px */
   @media only screen and (min-width: 64rem) {
+    .cs-text {
+        font-size: var(--bodyFontSize);
+    }
     #cs-navigation {
       width: 100%;
       /* prevents padding and border from affecting height and width */
@@ -1088,7 +1093,6 @@ h1,h2,h3,h4,h5,h6 {
       position: relative;
   }
   #inquiries .cs-text {
-      font-size: var(--bodyFontSize);
       line-height: 1.5em;
       text-align: inherit;
       width: 100%;
