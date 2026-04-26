@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(sips:*)"
+      "Bash(sips:*)",
+      "Bash(grep -E '\\\\.\\(html|htm\\)$')"
     ]
   }
 }
