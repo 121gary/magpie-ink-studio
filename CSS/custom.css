@@ -25,6 +25,14 @@
     --sectionPadding: clamp(10rem, 10vw, 12.25rem) 1rem clamp(1rem, 4vw, 6rem) 1rem;
 }
 
+#cs-navigation {
+  transition: transform 0.4s ease;
+}
+#cs-navigation.cs-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
 #hero-video {
   width: 100%;
   object-fit: cover;
@@ -34,10 +42,30 @@
   padding-top: 30vh;
 }
 
+#magpie-title {
+  animation: subtitle-fade-in 1.5s ease forwards;
+  opacity: 0;
+}
+
 #magpie-subtitle {
   padding-top: 4vh;
   font-family: "Manrope", sans-serif;
   letter-spacing: .06em;
+}
+
+#subtitle-line1 {
+  opacity: 0;
+  animation: subtitle-fade-in 1.5s ease 2s forwards;
+}
+
+#subtitle-line2 {
+  opacity: 0;
+  animation: subtitle-fade-in 1.5s ease 4s forwards;
+}
+
+@keyframes subtitle-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .cs-text-bold{
@@ -179,6 +207,17 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 15%; */
 }
 
+@keyframes monogram-parallax {
+  from { transform: translateY(100px) scale(3); }
+  to { transform: translateY(-100px) scale(1); }
+}
+
+#appointments .cs-item img {
+  animation: monogram-parallax linear both;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+}
+
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
@@ -226,6 +265,10 @@ h1,h2,h3,h4,h5,h6 {
       position: relative;
       display: block;
   }
+  #artists a.cs-item {
+      border-radius: 50%;
+      overflow: hidden;
+  }
   #artists .cs-item:hover .cs-hover-box {
       opacity: 1;
   }
@@ -249,6 +292,8 @@ h1,h2,h3,h4,h5,h6 {
       height: 100%;
       display: block;
       position: relative;
+      border-radius: 50%;
+      overflow: hidden;
   }
   #artists .cs-picture img {
       position: absolute;
@@ -257,6 +302,7 @@ h1,h2,h3,h4,h5,h6 {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      border-radius: 50%;
   }
   #artists .cs-hover-box {
       text-align: center;
@@ -277,6 +323,7 @@ h1,h2,h3,h4,h5,h6 {
       top: 0;
       left: 0;
       z-index: 10;
+      border-radius: 50%;
       /* prevents mouse from being able to interact with these elements */
       pointer-events: none;
       transition: opacity 0.3s;
@@ -356,6 +403,9 @@ h1,h2,h3,h4,h5,h6 {
   .cs-text {
       font-size: 1rem;
   }
+  #home .cs-text {
+      font-size: 1.2rem;
+  }
 }
 
 
@@ -428,7 +478,7 @@ h1,h2,h3,h4,h5,h6 {
     }
     #home .cs-text {
         /* 16px - 25px */
-        font-size: clamp(1.5rem, 3vw, 6rem);
+        font-size: clamp(1rem, 3vw, 2rem);
         line-height: 1.5em;
         text-align: center;
         width: 100%;
@@ -906,6 +956,9 @@ h1,h2,h3,h4,h5,h6 {
   @media only screen and (min-width: 64rem) {
     .cs-text {
         font-size: var(--bodyFontSize);
+    }
+    #home .cs-text {
+        font-size: clamp(1.5rem, 1.8vw, 2rem);
     }
     #cs-navigation {
       width: 100%;

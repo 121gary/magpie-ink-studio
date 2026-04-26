@@ -147,7 +147,7 @@
         <section id="home">
             <div class="cs-container">
                 <h1 id="magpie-title" class="cs-title">Magpie</h1>
-                <h2 id= "magpie-subtitle" class="cs-text">CHICAGO TATTOO STUDIO <br> APPOINTMENT ONLY</h2>
+                <h2 id="magpie-subtitle" class="cs-text"><span id="subtitle-line1">CHICAGO TATTOO STUDIO</span><br><span id="subtitle-line2">APPOINTMENT ONLY</span></h2>
             </div>
             <video id="hero-video" class="cs-background" autoplay muted loop playsinline>
                 <source src="Images/heroVideo.mp4" type="video/mp4">
@@ -161,7 +161,7 @@
             <div class="cs-container-div">
                 <h2 class="cs-title">Book an Appointment</h2>
                 <p class="cs-text"><br>Each Magpie artist has their own unique booking process, typically detailed on their Instagram page. <br><span class="cs-text-bold">Contact artists directly for appointments.</span></p>
-                <br><br><br>
+                <br><br><br><br>
                 <a class="cs-item" target="_blank" aria-label="visit Magpie instagram" href="https://www.instagram.com/magpie.inkstudio">
                     <img src="Images/Monogram-White-GradientOutline.svg">
                 </a>
@@ -379,6 +379,41 @@
                 if (path && document.getElementById(path)) {
                     document.getElementById(path).scrollIntoView();
                 }
+            })();
+        </script>
+        <script>
+            (function () {
+                const nav = document.querySelector('#cs-navigation');
+                let idleTimer;
+                let mouseMoveDebounce;
+
+                function startIdleTimer() {
+                    clearTimeout(idleTimer);
+                    idleTimer = setTimeout(() => {
+                        if (!nav.classList.contains('cs-active')) {
+                            nav.classList.add('cs-hidden');
+                        }
+                    }, 2000);
+                }
+
+                function showNav() {
+                    nav.classList.remove('cs-hidden');
+                    startIdleTimer();
+                }
+
+                function onMouseMove() {
+                    nav.classList.remove('cs-hidden');
+                    clearTimeout(mouseMoveDebounce);
+                    mouseMoveDebounce = setTimeout(startIdleTimer, 200);
+                }
+
+                ['scroll', 'touchstart', 'touchmove', 'keydown', 'click', 'pointerdown'].forEach(event => {
+                    window.addEventListener(event, showNav, { passive: true });
+                });
+
+                window.addEventListener('mousemove', onMouseMove, { passive: true });
+
+                startIdleTimer();
             })();
         </script>
     </body>
