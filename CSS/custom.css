@@ -352,7 +352,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #artists .cs-item {
-      grid-column: span 4;
+      grid-column: span 6;
   }
 }
 
