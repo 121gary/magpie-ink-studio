@@ -147,7 +147,7 @@
         <section id="home">
             <div class="cs-container">
                 <h1 id="magpie-title" class="cs-title">Magpie</h1>
-                <h2 id="magpie-subtitle" class="cs-text"><span id="subtitle-line1">CHICAGO TATTOO STUDIO</span><br><span id="subtitle-line2">APPOINTMENT ONLY</span></h2>
+                <h2 id="magpie-subtitle" class="cs-text"><span id="subtitle-line1">CHICAGO TATTOO STUDIOS</span><br><span id="subtitle-line2">APPOINTMENT ONLY</span></h2>
             </div>
             <video id="hero-video" class="cs-background" autoplay muted loop playsinline>
                 <source src="Images/heroVideo2.mp4" type="video/mp4">
@@ -155,12 +155,39 @@
             </video>
         </section>
         <!-- ============================================ -->
+        <!--              Studio Introduction            -->
+        <!-- ============================================ -->
+        <section id="studio-introduction">
+            <div class="cs-container-div">
+                <h2 class="cs-title">The Studios</h2>
+                <p class="cs-text">Our studios offer a clean, relaxing space for artists to do their best work and clients to feel at ease.</p>
+                <div class="studio-card-grid">
+                    <article class="studio-card">
+                        <img class="studio-card-image" src="Images/bucktown.jpg" alt="Inside the Magpie Ink Studio in Bucktown">
+                        <div class="studio-card-content">
+                            <h3 class="studio-card-title">Bucktown Studio</h3>
+                            <p class="studio-card-address">1913 N Milwaukee Ave<br>Chicago, IL 60647</p>
+                            <a class="studio-directions" href="https://maps.app.goo.gl/1gzuV3XRDLJU2ipn6" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        </div>
+                    </article>
+                    <article class="studio-card">
+                        <img class="studio-card-image" src="Images/placeholder1.png" alt="Wicker Park studio photo placeholder">
+                        <div class="studio-card-content">
+                            <h3 class="studio-card-title">Wicker Park Studio</h3>
+                            <p class="studio-card-address">1721 W North Ave<br>Chicago, IL 60622</p>
+                            <a class="studio-directions" href="https://www.google.com/maps/search/?api=1&amp;query=1721+W+North+Ave+Chicago+IL+60622" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================ -->
         <!--                   Appointments               -->
         <!-- ============================================ -->
         <section id="appointments">
             <div class="cs-container-div">
                 <h2 class="cs-title">Book an Appointment</h2>
-                <p class="cs-text"><br>Each Magpie artist has their own unique booking process, typically detailed on their Instagram page. <br><br><span class="cs-text-bold">Contact artists directly for appointments.</span></p>
+                <p class="cs-text"><br>Each Magpie artist has their own unique booking process, typically detailed on their Instagram page. <br><span class="cs-text-bold">Contact artists directly for appointments.</span></p>
                 <br><br><br><br>
                 <a class="cs-item" target="_blank" aria-label="visit Magpie instagram" href="https://www.instagram.com/magpie.inkstudio">
                     <img id="appointments-monogram" src="Images/Monogram-White-GradientOutline.png">
@@ -172,8 +199,8 @@
         <!-- ============================================ -->
         <section id="artists">
             <div class="cs-container-div">
-                <h2 class="cs-title">Our artists are what makes us, us.</h2>
-                <p class="cs-text">Bring your tattoo vision to life. <br><br> View Magpie <span class="cs-text-bold">artist portfolios</span> below to select the best artist for your tattoo.</p>
+                <h2 class="cs-title">Magpie Artists</h2>
+                <p class="cs-text">Bring your tattoo vision to life. <br> View Magpie <span class="cs-text-bold">artist portfolios</span> below to select the best artist for your tattoo.</p>
                 <br><br><br><br>
             </div>
             <div class="cs-container-div">
@@ -197,28 +224,8 @@
                                 </div>
                             </a>
                             <h3 class="cs-subtitle">Seulgee</h3>
+                            <p class="cs-text artist-role">Resident Artist</p>
                             <p class="cs-text">Fine Line, Microrealism</p>
-                            <p class="cs-text magpie-dot" >&#183;</p>
-                        </div>
-                        <!-- Image 2 -->
-                        <div class='cs-item'>
-                            <a class="cs-item" target=”_blank” href="https://www.instagram.com/slxpxke/">
-                                <picture class="cs-picture">
-                                    <source media="(max-width: 600px)" srcset="Images/alli.JPG">
-                                    <source media="(min-width: 601px)" srcset="Images/alli.JPG">
-                                    <img aria-hidden="true" loading="lazy" decoding="async" src="Images/alli.jpg" alt="Alli Tattoo" width="346" height="346">
-                                </picture>
-                                <div class="cs-hover-box">
-                                    <picture class="cs-icon">
-                                        <img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="magpie ink studio monogram" width="20" height="20" aria-hidden="true">
-                                    </picture>
-                                    <p class="cs-hover-box-text">
-                                        VIEW PORTFOLIO
-                                    </p>
-                                </div>
-                            </a>
-                            <h3 class="cs-subtitle">Alli</h3>
-                            <p class="cs-text">Hand Poke, Illustration</p>
                             <p class="cs-text magpie-dot" >&#183;</p>
                         </div>
                         <!-- Image 3 -->
@@ -239,6 +246,7 @@
                                 </div>
                             </a>
                             <h3 class="cs-subtitle">Angelica</h3>
+                            <p class="cs-text artist-role">Resident Artist</p>
                             <p class="cs-text">Fine Line, Illustrative Japanese</p>
                             <p class="cs-text magpie-dot" >&#183;</p>
                         </div>
@@ -260,16 +268,122 @@
                                 </div>
                             </a>
                             <h3 class="cs-subtitle">Marti</h3>
+                            <p class="cs-text artist-role">Resident Artist</p>
                             <p class="cs-text">Fine Line, Whimsical</p>
                             <p class="cs-text magpie-dot" >&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/addaboyyy/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Taylor" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Taylor</h3>
+                            <p class="cs-text artist-role">Resident Artist</p>
+                            <p class="cs-text">Fine Line, Microrealism</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/high.onart/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Emily" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Emily</h3>
+                            <p class="cs-text artist-role">Resident Artist</p>
+                            <p class="cs-text">Fine Line, Botanicals</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/matastatts/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Matas" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Matas</h3>
+                            <p class="cs-text artist-role">Junior Resident Artist</p>
+                            <p class="cs-text">Blackwork, Illustrative</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/alteredink_/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Owen" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Owen</h3>
+                            <p class="cs-text artist-role">Junior Resident Artist</p>
+                            <p class="cs-text">Blackwork, Illustrative</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/sweetpokes4sweetfolks/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Karin" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Karin</h3>
+                            <p class="cs-text artist-role">Flex Artist</p>
+                            <p class="cs-text">Pointillism, Collage</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/kamarah.tats/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Kamarah" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Kamarah</h3>
+                            <p class="cs-text artist-role">Flex Artist</p>
+                            <p class="cs-text">Hand Poke, Abstract</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
+                        </div>
+                        <div class="cs-item">
+                            <a class="cs-item" href="https://www.instagram.com/natalia.struk.art/" target="_blank" rel="noopener noreferrer">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Placeholder portrait for Natalia" width="346" height="346">
+                                </picture>
+                                <div class="cs-hover-box">
+                                    <picture class="cs-icon"><img loading="lazy" decoding="async" src="Images/Monogram-White-GradientOutline.png" alt="" width="20" height="20"></picture>
+                                    <p class="cs-hover-box-text">VIEW PORTFOLIO</p>
+                                </div>
+                            </a>
+                            <h3 class="cs-subtitle">Natalia</h3>
+                            <p class="cs-text artist-role">Flex Artist</p>
+                            <p class="cs-text">Fine Line, Floral</p>
+                            <p class="cs-text magpie-dot">&#183;</p>
                         </div>
                         <!-- Image 5 -->
                         <!-- <div class='cs-item'>
                             <a class="cs-item" target=”_blank” href="https://www.instagram.com/rachael_ann_bell">
                                 <picture class="cs-picture">
-                                    <source media="(max-width: 600px)" srcset="Images/placeholder1.png">
-                                    <source media="(min-width: 601px)" srcset="Images/placeholder1.png">
-                                    <img loading="lazy" decoding="async" src="Images/placeholder1.png" alt="Rachael Ann Bell Tattoos" width="346" height="346">
+                                    <source media="(max-width: 600px)" srcset="Images/placeholder2.png">
+                                    <source media="(min-width: 601px)" srcset="Images/placeholder2.png">
+                                    <img loading="lazy" decoding="async" src="Images/placeholder2.png" alt="Rachael Ann Bell Tattoos" width="346" height="346">
                                 </picture>
                                 <div class="cs-hover-box">
                                     <picture class="cs-icon">
@@ -336,28 +450,41 @@
         <!--                   Footer                     -->
         <!-- ============================================ -->
         <footer id="cs-footer-269">
-            <div class="cs-container">
-                <!-- Logo Group -->
-                <div class="cs-logo-group">
-                    <a aria-label="go back to home" class="cs-logo" href="/">
-                        <img class="cs-logo-img light" aria-hidden="true" loading="lazy" decoding="async" src="Images/Monogram-White-Background.svg" alt="logo">
-                    </a>
-                    <a class="cs-contact-link" href="https://maps.app.goo.gl/1gzuV3XRDLJU2ipn6">1913 N Milwaukee Ave, Chicago, IL</a>
-                    <p class="cs-text">&copy; <span id="year"></span> Magpie Ink Studio</p>
+            <div class="footer-container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a class="footer-logo" href="/" aria-label="Magpie Ink Studio home">
+                            <img src="Images/logotypeWhite.svg" alt="Magpie Ink Studio" width="210" height="29">
+                        </a>
+                    </div>
+
+                    <div class="footer-locations">
+                        <h2 class="footer-heading">Visit our studios</h2>
+                        <div class="footer-location-grid">
+                            <section class="footer-location">
+                                <h3>Bucktown</h3>
+                                <p>1913 N Milwaukee Ave<br>Chicago, IL 60647</p>
+                                <a href="https://maps.app.goo.gl/1gzuV3XRDLJU2ipn6" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+                            </section>
+                            <section class="footer-location">
+                                <h3>Wicker Park</h3>
+                                <p>1721 W North Ave<br>Chicago, IL 60622</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=1721+W+North+Ave+Chicago+IL+60622" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-                <div id="logo-group">
-                    <a class="cs-item" target=”_blank” aria-label="visit Magpie instagram" href="https://www.instagram.com/magpie.inkstudio">
-                        <img id="ig-icon" src="Images/icon-IG.svg" alt="instagram" width="24" height="24">
+
+                <div class="footer-bottom">
+                    <a class="footer-social" href="https://www.instagram.com/magpie.inkstudio" target="_blank" rel="noopener noreferrer" aria-label="Visit Magpie Ink Studio on Instagram">
+                        <img src="Images/icon-IG.svg" alt="Instagram" width="20" height="20">
                     </a>
-                    <a class="cs-item" target=”_blank” aria-label="get directions" href="https://maps.app.goo.gl/NGFpL4komjqbohVV7">
-                        <img id="ig-icon" src="Images/icon-location.svg" alt="Google Maps" width="24" height="24">
-                    </a>
-                    <!-- FONT AWESOME -->
-                    <script>
-                        document.getElementById("year").textContent = new Date().getFullYear();
-                      </script>
+                    <p>&copy; <span id="year"></span> Magpie Ink Studio</p>
                 </div>
             </div>
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
         </footer>
         <script>
             // Handle nav link clicks - scroll to section and update URL

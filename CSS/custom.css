@@ -5,13 +5,16 @@
     --primaryDark: #2D2D2D;
     --primaryLight: #A7A2A9;
     --secondary: #F4F7F5;
-    --secondaryLight: #fff;
+    --secondaryLight: #DCE0D7;
     --headerColor: #08090A;
     /* --bodyTextColor: #F4F7F5;
     --bodyTextColorWhite: #F4F7F5; */
     --bodyTextColor: var(--primary);
     --bodyTextColorWhite: var(--secondaryLight);
     --footerColor: var(--secondary);
+    --pageBackground: #E6EAFB;
+    --surfaceBackground: #F7F4EF;
+    --footerBackground: #2B383B;
     --white: #fff;
     --magpieBlue: #0012B7;
     /* 13px - 16px */
@@ -77,6 +80,7 @@ body {
     padding: 0;
     font-family: "Manrope", sans-serif;
     font-weight: 400;
+    background-color: var(--secondaryLight);
 }
 
 img {
@@ -191,6 +195,16 @@ h1,h2,h3,h4,h5,h6 {
   max-width: inherit;
   color: var(--primary);
 }
+
+#artists .artist-role {
+  margin: 0.25rem 0;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 #artists .cs-container-div {
   width: 100%;
   /* margin-top: 15%;
@@ -217,6 +231,90 @@ h1,h2,h3,h4,h5,h6 {
   width: 100%;
   /* margin-top: 15%;
   margin-bottom: 15%; */
+}
+
+#studio-introduction {
+  text-align: center;
+  padding: var(--sectionPadding);
+}
+
+#studio-introduction .cs-title {
+  max-width: inherit;
+  color: var(--magpieBlue);
+}
+
+#studio-introduction .cs-text {
+  max-width: 40.625rem;
+  color: var(--primary);
+  margin: 0 auto;
+}
+
+#studio-introduction .cs-container-div {
+  width: 100%;
+}
+
+.studio-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(100%, 70rem);
+  margin: 4rem auto 0;
+  text-align: left;
+}
+
+.studio-card {
+  overflow: hidden;
+  background: var(--surfaceBackground);
+  border-radius: 4px;
+}
+
+.studio-card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.studio-card-content {
+  padding: 1.75rem;
+}
+
+.studio-card-title {
+  margin: 0 0 1rem;
+  color: var(--magpieBlue);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+}
+
+.studio-card-address {
+  margin: 0 0 1.5rem;
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+.studio-directions {
+  display: inline-block;
+  padding: 0.8rem 1.25rem;
+  background: var(--magpieBlue);
+  color: var(--white);
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.studio-directions:hover,
+.studio-directions:focus-visible {
+  background: var(--primary);
+}
+
+@media only screen and (max-width: 60rem) {
+  .studio-card-grid {
+    grid-template-columns: 1fr;
+    max-width: 40.625rem;
+  }
 }
 
 @keyframes monogram-parallax {
@@ -571,7 +669,7 @@ h1,h2,h3,h4,h5,h6 {
         /* padding-top: clamp(2.75rem, 3%, 6.25rem);
         padding-left: clamp(2.75rem, 3%, 6.25rem);
         padding-right: clamp(2.75rem, 3%, 6.25rem); */
-        background-color: var(--primary);
+        background-color: var(--footerBackground);
         /* Navigation Links */
         /* Contact Links */
     }
@@ -612,7 +710,7 @@ h1,h2,h3,h4,h5,h6 {
         margin-bottom: 2rem;
         /* changes to 305px at desktop */
         max-width: 33.75rem;
-        color: var(--secondary);
+        color: var(--surfaceBackground);
     }
     #cs-footer-269 .cs-nav {
         padding: 0;
@@ -631,7 +729,7 @@ h1,h2,h3,h4,h5,h6 {
         line-height: 1.5em;
         font-weight: 700;
         margin-bottom: 0.875rem;
-        color: var(--secondary);
+        color: var(--surfaceBackground);
         position: relative;
         display: block;
     }
@@ -639,7 +737,7 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 1rem;
         text-decoration: none;
         line-height: 1.5em;
-        color: var(--secondary);
+        color: var(--surfaceBackground);
         position: relative;
     }
     #cs-footer-269 .cs-nav-link:before {
@@ -679,7 +777,7 @@ h1,h2,h3,h4,h5,h6 {
         text-decoration: none;
         line-height: 1.5em;
         text-align: left;
-        color: var(--secondary);
+        color: var(--surfaceBackground);
         display: inline-block;
     }
     #cs-footer-269 .cs-contact-link:hover {
@@ -745,6 +843,158 @@ h1,h2,h3,h4,h5,h6 {
         margin-top: clamp(0.5rem, 1.2vw, 0.75rem);
     }
 }
+
+#cs-footer-269 {
+  padding: clamp(3.5rem, 7vw, 6rem) 1.5rem 1.5rem;
+  color: var(--surfaceBackground);
+}
+
+#cs-footer-269 .footer-container {
+  width: min(100%, 78rem);
+  margin: 0 auto;
+}
+
+#cs-footer-269 .footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 2fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding-bottom: 4rem;
+}
+
+#cs-footer-269 .footer-logo {
+  display: inline-block;
+  width: clamp(9rem, 14vw, 12rem);
+  margin-bottom: 1.5rem;
+}
+
+#cs-footer-269 .footer-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#cs-footer-269 .footer-brand > p {
+  max-width: 18rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+#cs-footer-269 .footer-heading {
+  margin: 0 0 1.5rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+#cs-footer-269 .footer-location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+#cs-footer-269 .footer-location {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(247, 244, 239, 0.32);
+}
+
+#cs-footer-269 .footer-location h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+#cs-footer-269 .footer-location p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+#cs-footer-269 .footer-location a,
+#cs-footer-269 .footer-social {
+  color: var(--surfaceBackground);
+  text-decoration: none;
+}
+
+#cs-footer-269 .footer-location a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+}
+
+#cs-footer-269 .footer-location a:hover,
+#cs-footer-269 .footer-social:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+#cs-footer-269 .footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#cs-footer-269 .footer-social img {
+  display: block;
+}
+
+#cs-footer-269 .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(247, 244, 239, 0.32);
+  font-size: 0.8rem;
+}
+
+#cs-footer-269 .footer-bottom p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 60rem) {
+  #cs-footer-269 .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  #cs-footer-269 .footer-brand {
+    grid-column: auto;
+  }
+}
+
+@media only screen and (max-width: 42rem) {
+  #cs-footer-269 .footer-main,
+  #cs-footer-269 .footer-location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #cs-footer-269 .footer-brand {
+    grid-column: auto;
+  }
+
+  #cs-footer-269 .footer-bottom {
+    flex-direction: column;
+  }
+
+  #cs-footer-269 .footer-main {
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  #cs-footer-269 .footer-location-grid {
+    gap: 1.5rem;
+  }
+}
+
+#cs-footer-269 a:focus-visible {
+  outline: 2px solid var(--surfaceBackground);
+  outline-offset: 4px;
+}
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -758,7 +1008,7 @@ h1,h2,h3,h4,h5,h6 {
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       padding: 0.75rem 1rem;
-      background-color: #fff;
+      background-color: var(--surfaceBackground);
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
@@ -883,7 +1133,7 @@ h1,h2,h3,h4,h5,h6 {
       width: 100%;
       height: auto;
       padding-bottom: 2.4em;
-      background-color: #fff;
+      background-color: var(--surfaceBackground);
       box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
       opacity: 0;
       position: absolute;
@@ -1002,7 +1252,7 @@ h1,h2,h3,h4,h5,h6 {
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       padding: 0 1rem;
-      background-color: #fff;
+      background-color: var(--surfaceBackground);
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
@@ -1140,6 +1390,7 @@ h1,h2,h3,h4,h5,h6 {
   }
   #inquiries {
       padding: var(--sectionPadding);
+      background-color: var(--secondaryLight);
   }
   #inquiries .cs-container {
       width: 100%;
@@ -1344,7 +1595,7 @@ h1,h2,h3,h4,h5,h6 {
       width: 90px;
       height: 90px;
       padding: 0;
-      background-color: var(--secondaryLight);
+      background-color: var(--surfaceBackground);
       border-radius: 50%;
       display: inline-block;
       position: relative;
