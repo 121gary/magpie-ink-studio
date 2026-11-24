@@ -91,14 +91,6 @@ img {
   max-height: 60vh;
   width: 100vw;
   object-fit: cover;
-  animation: full-bleed-zoom linear both;
-  animation-timeline: view();
-  animation-range: entry 0% exit 100%;
-}
-
-@keyframes full-bleed-zoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.2); }
 }
 
 .image {
@@ -421,6 +413,11 @@ h1,h2,h3,h4,h5,h6 {
       width: 100%;
       object-fit: cover;
       border-radius: 50%;
+  }
+  #artists .cs-picture img.artist-portrait {
+      object-position: center 60%;
+      transform: scale(1.2);
+      transform-origin: center 60%;
   }
   #artists .cs-hover-box {
       text-align: center;
