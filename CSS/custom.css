@@ -918,11 +918,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #cs-footer-269 .footer-location a {
-  display: inline-flex;
-  min-height: 2.75rem;
-  align-items: center;
+  display: inline-block;
   font-size: 0.875rem;
   letter-spacing: 0.03em;
+  line-height: 1.6;
 }
 
 #cs-footer-269 .footer-location a:hover,
@@ -987,6 +986,11 @@ h1,h2,h3,h4,h5,h6 {
 
   #cs-footer-269 .footer-location-grid {
     gap: 1.5rem;
+  }
+
+  #cs-footer-269 .footer-location a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 }
 
