@@ -153,6 +153,12 @@
                 <source src="Images/heroVideo2-optimized.mp4" type="video/mp4">
                 Your browser does not support this video.
             </video>
+            <script>
+                const heroVideo = document.getElementById('hero-video');
+                const revealHeroVideo = () => heroVideo.classList.add('is-playing');
+                heroVideo.addEventListener('playing', revealHeroVideo, { once: true });
+                if (!heroVideo.paused && heroVideo.readyState >= 2) revealHeroVideo();
+            </script>
         </section>
         <!-- ============================================ -->
         <!--              Studio Introduction            -->
@@ -171,7 +177,7 @@
                         </div>
                     </article>
                     <article class="studio-card">
-                        <img class="studio-card-image" src="Images/placeholder1.png" alt="Wicker Park studio photo placeholder">
+                        <img class="studio-card-image" src="Images/optimized/wickerpark.jpg" alt="Inside the Magpie Ink Studio in Wicker Park">
                         <div class="studio-card-content">
                             <h3 class="studio-card-title">Wicker Park Studio</h3>
                             <p class="studio-card-address">1721 W North Ave<br>Chicago, IL 60622</p>
